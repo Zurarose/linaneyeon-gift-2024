@@ -29,7 +29,7 @@ export default function Menu({className}: MenuPropsT) {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [menuRef]);
 
   return (
     <>
