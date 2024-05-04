@@ -5,11 +5,11 @@ import {MenuIcon} from '@/ui-kit/Icons';
 import {cx} from 'class-variance-authority';
 import React, {useEffect, useRef, useState} from 'react';
 
-type ManuPropsT = {
+type MenuPropsT = {
   className?: string;
 };
 
-export default function Manu({className}: ManuPropsT) {
+export default function Menu({className}: MenuPropsT) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
