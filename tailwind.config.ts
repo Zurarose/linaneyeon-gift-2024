@@ -22,17 +22,17 @@ const config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
-          hover: 'hsl(var(--primary-hover))'
+          hover: 'hsl(var(--primary-hover))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
-          hover: 'hsl(var(--secondary-hover))'
+          hover: 'hsl(var(--secondary-hover))',
         },
         tertiary: {
           DEFAULT: 'hsl(var(--tertiary))',
           foreground: 'hsl(var(--tertiary-foreground))',
-          hover: 'hsl(var(--tertiary-hover))'
+          hover: 'hsl(var(--tertiary-hover))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',

@@ -1,21 +1,21 @@
-'use client'
+'use client';
 
 import {cn} from '@/helpers/tailwind';
 import {MenuIcon} from '@/ui-kit/Icons';
-import { cx } from 'class-variance-authority';
-import React, { useEffect, useRef, useState } from 'react';
+import {cx} from 'class-variance-authority';
+import React, {useEffect, useRef, useState} from 'react';
 
 type ManuPropsT = {
   className?: string;
 };
 
 export default function Manu({className}: ManuPropsT) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleOpen = () => {
-    setOpen((prev) => !prev)
-  }
+    setOpen(prev => !prev);
+  };
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -36,13 +36,17 @@ export default function Manu({className}: ManuPropsT) {
       <div
         className={cn(
           'w-10 h-10 bg-secondary hover:bg-secondary-hover rounded-full flex justify-center items-center cursor-pointer transition-all duration-300',
-          className
+          className,
         )}
-        onClick={toggleOpen}
-        >
+        onClick={toggleOpen}>
         <MenuIcon size={20} />
       </div>
-      <div ref={menuRef} className={cx('w-52 p-4 h-screen fixed top-0 left-0 bg-secondary rounded-r-lg transition-all duration-300', !open ? '-translate-x-52' : 'translate-x-0')}>
+      <div
+        ref={menuRef}
+        className={cx(
+          'w-52 p-4 h-screen fixed top-0 left-0 bg-secondary rounded-r-lg transition-all duration-300',
+          !open ? '-translate-x-52' : 'translate-x-0',
+        )}>
         menu
       </div>
     </>
