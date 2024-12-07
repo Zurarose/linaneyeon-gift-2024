@@ -1,13 +1,8 @@
 {
-  "name": "learning-japanese",
+  "name": "linaneyeon-present",
   "version": "0.1.0",
   "private": true,
   "contributors": [
-    {
-      "name": "Sergey Antonyuk",
-      "email": "bob031299@gmail.com",
-      "url": "https://github.com/Gransly"
-    },
     {
       "name": "Oleh Sannikov",
       "email": "specter8471102@gmail.com",
@@ -16,33 +11,33 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint && prettier --check .",
     "lint:fix": "next lint --fix && prettier --write --list-different ."
   },
   "dependencies": {
-    "class-variance-authority": "^0.7.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.378.0",
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "^15.0.4",
+    "react": "^19.0.0",
+    "react-confetti": "^6.1.0",
+    "react-dom": "^19.0.0",
     "react-icons": "^5.2.0",
-    "tailwind-merge": "^2.3.0",
+    "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.16",
     "typescript": "^5"
   }
 }

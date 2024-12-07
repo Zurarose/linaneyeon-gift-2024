@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes shake {
+  0%, 100% {transform: translateX(0)}
+  10%, 30%, 50%, 70% {transform: rotateZ(-2deg) translateX(-5px) }
+  20%, 40%, 60% {transform: rotateZ(2deg) translateX(5px) }
+}
+
+@keyframes bounce {
+  0%, 100% {transform: translateY(0)}
+  10%, 30%, 50%, 70%, 90% {transform: translateY(-4px) }
+  20%, 40%, 60%, 80% {transform: translateY(4px) }
+}
+
+.shake {
+  animation: shake 1.5s infinite ease-in-out;
+}
+
+.bounce {
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -58,6 +78,10 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
+}
+
+body {
+  transform: translate3d()
 }
 
 @layer base {

@@ -4,9 +4,9 @@ import {inter} from '@/ui-kit/Fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Learing Japanese',
-  description: 'Learing Japanese Application Created by Sergey Antonyuk and Oleh Sannikov',
-  authors: [{name: 'Sergey Antonyuk'}, {name: 'Oleh Sannikov'}],
+  title: 'LinaNeyeon Present',
+  description: 'Present for LinaNeyeon',
+  authors: [ {name: 'Oleh Sannikov', url: 'https://github.com/Zurarose'} ],
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Layout>{children}</Layout>
       </body>
