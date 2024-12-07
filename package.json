@@ -11,6 +11,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "prebuild": "npm install --force",
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
