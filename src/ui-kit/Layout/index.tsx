@@ -5,11 +5,11 @@ type LayoutPropsT = PropsWithChildren;
 
 export default function Layout({children}: LayoutPropsT) {
   return (
-    <div className="min-h-screen px-14 py-7 bg-main flex flex-col justify-start items-center">
+    <div className="min-h-screen overflow-hidden px-14 py-7 bg-main flex flex-col justify-start items-center">
       <header className="flex justify-center items-center">
         <Logo />
       </header>
-      <main>{children}</main>
+      <main className='flex flex-col justify-start items-center'>{children}</main>
     </div>
   );
 }

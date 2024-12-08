@@ -3,19 +3,67 @@
 @tailwind utilities;
 
 @keyframes shake {
-  0%, 100% {transform: translateX(0)}
-  10%, 30%, 50%, 70% {transform: rotateZ(-2deg) translateX(-5px) }
-  20%, 40%, 60% {transform: rotateZ(2deg) translateX(5px) }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: rotateZ(-2deg) translateX(-5px);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotateZ(2deg) translateX(5px);
+  }
+}
+
+@keyframes shake-small {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: rotateZ(-0.5deg) translateX(-0.5px);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotateZ(0.5deg) translateX(0.5px);
+  }
 }
 
 @keyframes bounce {
-  0%, 100% {transform: translateY(0)}
-  10%, 30%, 50%, 70%, 90% {transform: translateY(-4px) }
-  20%, 40%, 60%, 80% {transform: translateY(4px) }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-4px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(4px);
+  }
 }
 
 .shake {
   animation: shake 1.5s infinite ease-in-out;
+}
+
+.shake-small {
+  animation: shake-small 1.5s infinite ease-in-out;
 }
 
 .bounce {
@@ -81,7 +129,7 @@
 }
 
 body {
-  transform: translate3d()
+  transform: translate3d();
 }
 
 @layer base {

@@ -6,7 +6,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'LinaNeyeon Present',
   description: 'Present for LinaNeyeon',
-  authors: [ {name: 'Oleh Sannikov', url: 'https://github.com/Zurarose'} ],
+  authors: [{name: 'Oleh Sannikov', url: 'https://github.com/Zurarose'}],
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={inter.className}>
         <Layout>{children}</Layout>
       </body>
