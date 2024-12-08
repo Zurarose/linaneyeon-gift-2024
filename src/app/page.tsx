@@ -9,6 +9,42 @@ import Confetti from 'react-confetti';
 import BoxCapeImage1 from '@/public/assets/box-cape-килукити.png';
 import BoxBodyImage1 from '@/public/assets/box-body-килукити.png';
 
+import BoxCapeImage2 from '@/public/assets/box-cape-DenisBest.png';
+import BoxBodyImage2 from '@/public/assets/box-body-DenisBest.png';
+
+import BoxCapeImage3 from '@/public/assets/box-cape-hakkyson-епта.png';
+import BoxBodyImage3 from '@/public/assets/box-body-hakkyson-епта.png';  
+
+import BoxCapeImage4 from '@/public/assets/box-cape-Kualon.png';
+import BoxBodyImage4 from '@/public/assets/box-body-Kualon.png';
+
+import BoxCapeImage5 from '@/public/assets/box-cape-maria.png';
+import BoxBodyImage5 from '@/public/assets/box-body-maria.png';
+
+import BoxCapeImage6 from '@/public/assets/box-cape-roile.png';
+import BoxBodyImage6 from '@/public/assets/box-body-roile.png';
+
+import BoxCapeImage7 from '@/public/assets/box-cape-sikoraaxd.png';
+import BoxBodyImage7 from '@/public/assets/box-body-sikoraaxd.png';
+
+import BoxCapeImage8 from '@/public/assets/box-cape-viclyyy.png';
+import BoxBodyImage8 from '@/public/assets/box-body-viclyyy.png';
+
+import BoxCapeImage9 from '@/public/assets/box-cape-xneerx.png';
+import BoxBodyImage9 from '@/public/assets/box-body-xneerx.png';
+
+import BoxCapeImage10 from '@/public/assets/box-cape-Вовочка(Каблук).png';
+import BoxBodyImage10 from '@/public/assets/box-body-Вовочка(Каблук).png';
+
+import BoxCapeImage11 from '@/public/assets/box-cape-Исичка.png';
+import BoxBodyImage11 from '@/public/assets/box-body-Исичка.png';
+
+import BoxCapeImage12 from '@/public/assets/box-cape-Номанз.png';
+import BoxBodyImage12 from '@/public/assets/box-body-Номанз.png';
+
+import BoxCapeImage13 from '@/public/assets/box-cape-Твои-любимый-дед.png';
+import BoxBodyImage13 from '@/public/assets/box-body-Твои-любимый-дед.png';
+
 type ItemsT = {
   name: string,
   image: {
@@ -20,23 +56,18 @@ type ItemsT = {
 
 const Items = [
   {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
-  {name: 'килукити', image: {cape: BoxCapeImage1.src, body: BoxBodyImage1.src}, description: 'килукити'},
+  {name: 'DenisBest', image: {cape: BoxCapeImage2.src, body: BoxBodyImage2.src}, description: 'DenisBest'},
+  {name: 'hakkyson-епта', image: {cape: BoxCapeImage3.src, body: BoxBodyImage3.src}, description: 'hakkyson-епта'},
+  {name: 'Kualon', image: {cape: BoxCapeImage4.src, body: BoxBodyImage4.src}, description: 'Kualon'},
+  {name: 'maria', image: {cape: BoxCapeImage5.src, body: BoxBodyImage5.src}, description: 'maria'},
+  {name: 'roile', image: {cape: BoxCapeImage6.src, body: BoxBodyImage6.src}, description: 'roile'},
+  {name: 'sikoraaxd', image: {cape: BoxCapeImage7.src, body: BoxBodyImage7.src}, description: 'sikoraaxd'},
+  {name: 'viclyyy', image: {cape: BoxCapeImage8.src, body: BoxBodyImage8.src}, description: 'viclyyy'},
+  {name: 'xneerx', image: {cape: BoxCapeImage9.src, body: BoxBodyImage9.src}, description: 'xneerx'},
+  {name: 'Каблук', image: {cape: BoxCapeImage10.src, body: BoxBodyImage10.src}, description: 'Каблук'},
+  {name: 'Исичка', image: {cape: BoxCapeImage11.src, body: BoxBodyImage11.src}, description: 'Исичка'},
+  {name: 'Номанз', image: {cape: BoxCapeImage12.src, body: BoxBodyImage12.src}, description: 'Номанз'},
+  {name: 'Твои-любимый-дед', image: {cape: BoxCapeImage13.src, body: BoxBodyImage13.src}, description: 'Твои-любимый-дед'},
 ]
 
 import { cn } from "@/helpers/tailwind";
@@ -55,43 +86,43 @@ export default function Home() {
               <SmallBox {...Items[0]} />
             </div>
             <div className="absolute bottom-[-100px] left-[-120px] z-20">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[1]} />
             </div>
             <div className="absolute bottom-[-40px] left-[-270px] z-10">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[2]} />
             </div>
             <div className="absolute bottom-[20px] left-[-150px] z-0">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[3]} />
             </div>
             {/* right side */}
             <div className="absolute bottom-[-145px] left-[205px] z-20">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[4]} />
             </div>
             <div className="absolute bottom-[-100px] left-[365px] z-20">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[5]} />
             </div>
             <div className="absolute bottom-[-40px] left-[500px] z-10">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[6]} />
             </div>
             <div className="absolute bottom-[20px] left-[400px] z-0">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[7]} />
             </div>
             {/* right  bottom side */}
             <div className="absolute bottom-[-250px] left-[230px] z-50">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[8]} />
             </div>
             <div className="absolute bottom-[-220px] left-[365px] z-40">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[9]} />
             </div>
             <div className="absolute bottom-[-180px] left-[510px] z-30">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[10]} />
             </div>
             <div className="absolute bottom-[-120px] left-[640px] z-20">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[11]} />
             </div>
             {/* right  bottom side */}
             <div className="absolute bottom-[-250px] left-[15px] z-50">
-              <SmallBox {...Items[0]} />
+              <SmallBox {...Items[12]} />
             </div>
             <div className="absolute bottom-[-220px] left-[-120px] z-40">
               <SmallBox {...Items[0]} />
