@@ -1,6 +1,6 @@
 import {Marmelad} from 'next/font/google';
 
-export const inter = Marmelad({
+export const marmelad = Marmelad({
   weight: ['400'],
   subsets: ['latin'],
 });

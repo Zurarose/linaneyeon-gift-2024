@@ -58,6 +58,26 @@
   }
 }
 
+@keyframes fadeout {
+  0% {
+    opacity: 20%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fall {
+  15% {
+    transform: translateY(-50px);
+    
+  }
+  100% {
+    transform: translateY(9999px);
+  }
+}
+
+
 .shake {
   animation: shake 1.5s infinite ease-in-out;
 }
@@ -68,6 +88,18 @@
 
 .bounce {
   animation: bounce 1.5s infinite ease-in-out;
+}
+
+.fadeout {
+  animation: fadeout 0.2s ease-in-out;
+}
+
+.fall {
+  animation: fall 3s ease-in-out forwards;
+}
+
+.stroke-text {
+  text-shadow: -1px -1px 0 #0000002f, 1px -1px 0 #0000002f, -1px 1px 0 #0000002f, 1px 1px 0 #0000002f;
 }
 
 @layer base {

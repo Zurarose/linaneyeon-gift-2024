@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 import Layout from '@/ui-kit/Layout';
-import {inter} from '@/ui-kit/Fonts';
+import {marmelad} from '@/ui-kit/Fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={marmelad.className}>
         <Layout>{children}</Layout>
       </body>
     </html>
