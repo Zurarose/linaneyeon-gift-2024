@@ -77,6 +77,16 @@
   }
 }
 
+@keyframes fall-start {
+  0% {
+    transform: translateY(-1400px);
+    
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 .shake {
   animation: shake 1.5s infinite ease-in-out;
@@ -94,12 +104,20 @@
   animation: fadeout 0.2s ease-in-out;
 }
 
+.fall-start {
+  animation: fall-start 1.5s ease-in-out forwards;
+}
+
 .fall {
   animation: fall 3s ease-in-out forwards;
 }
 
 .stroke-text {
   text-shadow: -1px -1px 0 #0000002f, 1px -1px 0 #0000002f, -1px 1px 0 #0000002f, 1px 1px 0 #0000002f;
+}
+
+body {
+  overflow: hidden;
 }
 
 @layer base {
