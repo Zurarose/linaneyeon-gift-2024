@@ -127,7 +127,7 @@ export default function Home() {
           {!!modalData && <Modal item={modalData} onClose={closeModal} />}
           <Poopy />
           {/* <Cloud /> */}
-          <div className={cn("relative justify-between items-center", !!modalData && 'pointer-events-none touch-none')}>
+          <div className={cn("relative justify-between items-center mt-12", !!modalData && 'pointer-events-none touch-none')}>
             <div onClick={handleStart} className={cn((opennedCount !== Items?.length) && 'cursor-not-allowed')}>
               <PresentBoxMain className={cn((opennedCount !== Items?.length) && 'pointer-events-none touch-none')} />
             </div>
@@ -210,7 +210,7 @@ const Poopy = () => {
   }, [])
 
 
-  return <div className={cn("absolute bottom-0 left-0 rotate-45 -translate-x-96 translate-y-96 transition-transform duration-1000", isPopping && "-translate-x-24 translate-y-28") }><Image src={PoopyImage.src} width={PoopyImage.width} height={PoopyImage.height} alt="poopy" /></div>
+  return <div className={cn("absolute bottom-0 left-0 rotate-45 -translate-x-96 translate-y-96 transition-transform duration-1000", isPopping && "-translate-x-16 translate-y-44") }><Image src={PoopyImage.src} width={PoopyImage.width} height={PoopyImage.height} alt="poopy" /></div>
 }
 
 
