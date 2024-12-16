@@ -129,7 +129,7 @@ export default function Home() {
     setModalData(null);
   };
 
-  const mainCondition = opennedCount > Items?.length
+  const mainCondition = opennedCount < Items?.length
   const buttonClick = !isStart ? handleStart : mainCondition ? undefined : handleComplete
 
 
