@@ -9,6 +9,7 @@ import BoxCapeImage from '@/public/assets/box-cape.png';
 import BoxBodyImage from '@/public/assets/box-body.png';
 import Confetti from 'react-confetti';
 import PoopyImage from '@/public/assets/Poopy.png';
+import PresentImage from '@/public/assets/Present.png';
 
 import BoxCapeImage1 from '@/public/assets/box-cape-килукити.png';
 import BoxBodyImage1 from '@/public/assets/box-body-килукити.png';
@@ -63,6 +64,7 @@ import BoxBodyImage17 from '@/public/assets/box-body-Dr1ve_Kn1ght.png';
 
 import BoxCapeImage18 from '@/public/assets/box-cape-Кошмарик.png';
 import BoxBodyImage18 from '@/public/assets/box-body-Кошмарик.png';
+import { ScratchCard } from "next-scratchcard";
 
 
 
@@ -100,6 +102,7 @@ const Items = [
 export default function Home() {
   const [modalData, setModalData] = React.useState<ItemsT | null>(null);
   const [opennedCount, setOpenedCount] = React.useState(0);
+  const [isCompleted, setIsCompleted] = React.useState(false);
 
   const [isStart, setIsStart] = React.useState(false);
 
@@ -111,6 +114,10 @@ export default function Home() {
     setModalData(item);
     setOpenedCount(prev => prev + 1);
   };
+
+  const handleComplete = () => {
+    setIsCompleted(true);
+  }
   
   const closeModal = () => {
     if (!modalData) return
@@ -122,25 +129,28 @@ export default function Home() {
     setModalData(null);
   };
 
+  const buttonClick = !isStart ? handleStart : opennedCount < Items?.length ? undefined : handleComplete
+
   return (
       <React.Fragment>
           {!!modalData && <Modal item={modalData} onClose={closeModal} />}
-          <Poopy />
+          {isStart && <Poopy />}
+          {isCompleted && <ModalPresent />}
           {/* <Cloud /> */}
           <div className={cn("relative justify-between items-center mt-12", !!modalData && 'pointer-events-none touch-none')}>
-            <div onClick={handleStart} className={cn((opennedCount !== Items?.length) && 'cursor-not-allowed')}>
-              <PresentBoxMain className={cn((opennedCount !== Items?.length) && 'pointer-events-none touch-none')} />
+            <div onClick={buttonClick} className={cn((opennedCount < Items?.length) && 'cursor-not-allowed')}>
+              <PresentBoxMain className={cn((opennedCount < Items?.length) && 'pointer-events-none touch-none')} />
             </div>
-            {/* left side */}
             <div className={cn('transition-transform -translate-y-[1000px] duration-1000', isStart && 'translate-y-0')}>
-              <div id={Items?.[0]?.name} className="absolute bottom-[-140px] left-[40px] z-20" onClick={openModal(Items[0])}>
-                <SmallBox {...Items[0]} />
+              {/* left side */}
+              <div id={Items?.[6]?.name} className="absolute bottom-[-140px] left-[40px] z-20" onClick={openModal(Items[6])}>
+                <SmallBox {...Items[6]} />
               </div>
-              <div id={Items?.[1]?.name} className="absolute bottom-[-100px] left-[-120px] z-20" onClick={openModal(Items[1])}>
-                <SmallBox {...Items[1]} />
+              <div id={Items?.[10]?.name} className="absolute bottom-[-100px] left-[-120px] z-20" onClick={openModal(Items[10])}>
+                <SmallBox {...Items[10]} />
               </div>
-              <div id={Items?.[2]?.name} className="absolute bottom-[-40px] left-[-270px] z-10" onClick={openModal(Items[2])}>
-                <SmallBox {...Items[2]} />
+              <div id={Items?.[8]?.name} className="absolute bottom-[-40px] left-[-270px] z-10" onClick={openModal(Items[8])}>
+                <SmallBox {...Items[8]} />
               </div>
               <div id={Items?.[3]?.name} className="absolute bottom-[20px] left-[-150px] z-0" onClick={openModal(Items[3])}>
                 <SmallBox {...Items[3]} />
@@ -149,40 +159,40 @@ export default function Home() {
                 <SmallBox {...Items[16]} />
               </div>
               {/* right side */}
-              <div id={Items?.[4]?.name} className="absolute bottom-[-145px] left-[205px] z-20" onClick={openModal(Items[4])}>
-                <SmallBox {...Items[4]} />
+              <div id={Items?.[2]?.name} className="absolute bottom-[-145px] left-[205px] z-20" onClick={openModal(Items[2])}>
+                <SmallBox {...Items[2]} />
               </div>
-              <div id={Items?.[5]?.name} className="absolute bottom-[-100px] left-[365px] z-20" onClick={openModal(Items[5])}>
-                <SmallBox {...Items[5]} />
-              </div>
-              <div id={Items?.[6]?.name} className="absolute bottom-[-40px] left-[500px] z-10" onClick={openModal(Items[6])}>
-                <SmallBox {...Items[6]} />
-              </div>
-              <div id={Items?.[7]?.name} className="absolute bottom-[20px] left-[400px] z-0" onClick={openModal(Items[7])}>
-                <SmallBox {...Items[7]} />
-              </div>
-              <div id={Items?.[17]?.name} className="absolute bottom-[0px] left-[635px] z-0" onClick={openModal(Items[17])}>
+              <div id={Items?.[17]?.name} className="absolute bottom-[-100px] left-[365px] z-20" onClick={openModal(Items[17])}>
                 <SmallBox {...Items[17]} />
               </div>
-              {/* right  bottom side */}
-              <div id={Items?.[8]?.name} className="absolute bottom-[-250px] left-[230px] z-50" onClick={openModal(Items[8])}>
-                <SmallBox {...Items[8]} />
+              <div id={Items?.[13]?.name} className="absolute bottom-[-40px] left-[500px] z-10" onClick={openModal(Items[13])}>
+                <SmallBox {...Items[13]} />
+              </div>
+              <div id={Items?.[5]?.name} className="absolute bottom-[20px] left-[400px] z-0" onClick={openModal(Items[5])}>
+                <SmallBox {...Items[5]} />
+              </div>
+              <div id={Items?.[7]?.name} className="absolute bottom-[0px] left-[635px] z-0" onClick={openModal(Items[7])}>
+                <SmallBox {...Items[7]} />
+              </div>
+              {/* right bottom side */}
+              <div id={Items?.[4]?.name} className="absolute bottom-[-250px] left-[230px] z-50" onClick={openModal(Items[4])}>
+                <SmallBox {...Items[4]} />
               </div>
               <div id={Items?.[9]?.name} className="absolute bottom-[-220px] left-[365px] z-40" onClick={openModal(Items[9])}>
                 <SmallBox {...Items[9]} />
               </div>
-              <div id={Items?.[10]?.name} className="absolute bottom-[-180px] left-[510px] z-30" onClick={openModal(Items[10])}>
-                <SmallBox {...Items[10]} />
+              <div id={Items?.[1]?.name} className="absolute bottom-[-180px] left-[510px] z-30" onClick={openModal(Items[1])}>
+                <SmallBox {...Items[1]} />
               </div>
               <div id={Items?.[11]?.name} className="absolute bottom-[-120px] left-[640px] z-20" onClick={openModal(Items[11])}>
                 <SmallBox {...Items[11]} />
               </div>
-              {/* right  bottom side */}
+              {/* left bottom side */}
               <div id={Items?.[12]?.name} className="absolute bottom-[-250px] left-[15px] z-50" onClick={openModal(Items[12])}>
                 <SmallBox {...Items[12]} />
               </div>
-              <div id={Items?.[13]?.name} className="absolute bottom-[-220px] left-[-120px] z-40" onClick={openModal(Items[13])}>
-                <SmallBox {...Items[13]} />
+              <div id={Items?.[0]?.name} className="absolute bottom-[-220px] left-[-120px] z-40" onClick={openModal(Items[0])}>
+                <SmallBox {...Items[0]} />
               </div>
               <div id={Items?.[14]?.name} className="absolute bottom-[-180px] left-[-260px] z-30" onClick={openModal(Items[14])}>
               <SmallBox {...Items[14]} />
@@ -208,7 +218,6 @@ const Poopy = () => {
       clearTimeout(id);
     }
   }, [])
-
 
   return <div className={cn("absolute bottom-0 left-0 rotate-45 -translate-x-96 translate-y-96 transition-transform duration-1000", isPopping && "-translate-x-16 translate-y-44") }><Image src={PoopyImage.src} width={PoopyImage.width} height={PoopyImage.height} alt="poopy" /></div>
 }
@@ -246,7 +255,7 @@ const PresentBoxMain = ({className}: {className?: string}) => {
 }
 
 
-const SmallBox = ({description, image, name}: ItemsT) => {
+const SmallBox = ({image}: ItemsT) => {
   const [isOpened, setIsOpened] = React.useState(false);
   const [isConfetti, setIsConfetti] = React.useState(false);
   const onOpen = () => {
@@ -260,11 +269,11 @@ const SmallBox = ({description, image, name}: ItemsT) => {
 
   return (
       <div onClick={onOpen} className={cn("drop-shadow-xl cursor-grab relative flex flex-col justify-center items-center group h-[200px] w-[150px]", !isOpened && "shake-small")}>
-      {isOpened && <Confetti recycle={isConfetti} numberOfPieces={40} confettiSource={{
-            w: 50,
-            h: 20,
-            x: 150,
-            y: 150,
+          {isOpened && <Confetti recycle={isConfetti} numberOfPieces={40} confettiSource={{
+              w: 50,
+              h: 20,
+              x: 150,
+              y: 150,
           }} 
           height={400} width={300} gravity={0.2} opacity={0.8} className="!z-[999] absolute !-top-[100px] !-left-[100px]" />}
           <Image className={cn("absolute -top-[15px] z-20 transition-all", isOpened ? "-mt-14 -ml-20 -rotate-45" : "group-hover:scale-110 group-hover:-mt-2")} src={image.cape} alt="box-cape" width={150} height={100} />
@@ -276,7 +285,6 @@ const SmallBox = ({description, image, name}: ItemsT) => {
 
 const Modal = ({item, onClose}: {item: ItemsT, onClose: () => void}) => {
   const {description, name, color} = item;
-
   const textStyle = {color: color};
 
   return (
@@ -293,3 +301,32 @@ const Modal = ({item, onClose}: {item: ItemsT, onClose: () => void}) => {
       }
     </>)
 }
+
+
+const ModalPresent = ({className}: {className?: string}) => {
+  const [isTouched, setIsTouched] = React.useState(false);
+
+  const height = window.innerHeight - 100;
+  const idealAspectRatio = 16 / 10;
+  const maxWidth = height * idealAspectRatio;
+
+  const handleTouch = () => {
+    setIsTouched(true);
+  }
+
+  return (
+    <>
+      {createPortal(
+        <div className={cn("group fadeout fixed top-0 left-0 bg-black/70 h-screen w-screen flex flex-col justify-center items-center z-100")}>
+          {!isTouched && <p className="text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl z-100">Найди путь в сад персиков!</p>}
+          <ConfettiComponent />
+          <div onClick={handleTouch} onMouseDown={handleTouch} onTouchStart={handleTouch} className={cn("cursor-pointer fadeout-long shadow-md rounded-sm overflow-hidden z-50", className)}>
+          <ScratchCard finishPercent={65} brushSize={60} width={maxWidth} height={height}>
+            <Image src={PresentImage.src}  alt="cloud" className="z-0 rounded-sm present-aspect h-full w-full object-cover drop-shadow-lg transition-all" width={PresentImage.width} height={PresentImage.height} />
+          </ScratchCard>
+          </div>
+        </div>, document.body)
+      }
+    </>)
+}
+

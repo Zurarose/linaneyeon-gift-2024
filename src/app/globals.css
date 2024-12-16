@@ -104,6 +104,19 @@
   animation: fadeout 0.2s ease-in-out;
 }
 
+.fadeout-medium {
+  animation: fadeout 0.3s ease-in-out;
+}
+
+.fadeout-long {
+  animation: fadeout 0.5s ease-in-out;
+}
+
+.present-aspect {
+  aspect-ratio: 16/10;
+}
+
+
 .fall-start {
   animation: fall-start 1.5s ease-in-out forwards;
 }
